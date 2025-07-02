@@ -1,0 +1,91 @@
+import java.util.*;
+import java.lang.*;
+
+class CodeChef_problem1 {
+    Node head;
+    Node head1;
+    class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+
+    public void addLast(int data){
+        Node newNode=new Node(data);
+        if(head==null){
+           newNode.next=head;
+           head=newNode;
+           return;   
+        }
+        Node currNode=head;
+        while(currNode.next!=null) {
+            currNode=currNode.next;
+        }
+        currNode.next=newNode;
+    }
+    public void addLast_after_Removal(int data){
+        Node newNode=new Node(data);
+        if(head1==null){
+           newNode.next=head1;
+           head1=newNode;
+           return;   
+        }
+        Node currNode=head1;
+        while(currNode.next!=null) {
+            currNode=currNode.next;
+        }
+        currNode.next=newNode;
+    }
+
+    public void DisplayList(){
+        Node currNode=head;
+        if(head==null){
+            System.out.println("The LinkedList id empty");
+        }
+        while(currNode!=null){
+            System.out.print(currNode.data+"->");
+            currNode=currNode.next;
+        }
+        System.out.print("Null");
+    }
+    public void DisplayList_after_Removal(){
+        Node currNode=head1;
+        if(head1==null){
+            System.out.println("The LinkedList id empty");
+        }
+        while(currNode!=null){
+            System.out.print(currNode.data+" ");
+            currNode=currNode.next;
+        }
+        // System.out.print("Null");
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> arr=new ArrayList<>();
+        ArrayList<Integer> uniq=new ArrayList<>();
+        CodeChef_problem1 LL=new CodeChef_problem1();
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            arr.add(sc.nextInt());
+        }
+        for(int i=0;i<arr.size();i++){
+            LL.addLast(arr.get(i));
+        }
+        LL.DisplayList();
+        for(int i=0;i<arr.size();i++){
+            if(!uniq.contains(arr.get(i))){
+                uniq.add(arr.get(i));
+            }
+        }
+        System.out.println();
+        for(int i=0;i<uniq.size();i++){
+            LL.addLast_after_Removal(uniq.get(i));
+        }
+        // System.out.println(uniq.size());
+        LL.DisplayList_after_Removal();
+        
+    }
+}
