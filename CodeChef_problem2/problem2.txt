@@ -1,0 +1,46 @@
+Rotate K times in the right side of an array.
+You are given an array of size n.
+Your task is to rotate the array for K times.
+
+Input:
+First line will contain , The size of the array. 
+The Second line will contain the number of times you need to rotate the array.
+Note:
+
+I will use JAVA language. You can choose any of the languages.
+
+Don't need for the constraints just practice using bruteforce method.
+
+Example needed to be solved:- 
+
+Input
+5
+2
+1 2 3 4 5
+output:
+4 5 1 2 3
+
+Input
+5
+4
+10 20 30 40 50
+output:
+20 30 40 50 10
+
+Input
+1
+3
+12
+output
+12 
+
+Explanation:
+The array should be rotated K times int the right side of the array.
+Suppose I have 5 elements and I want to rotate the array 2 times in the right.
+1 2 3 4 5
+
+1st Rotation
+5 1 2 3 4
+
+2nd Rotation
+4 5 1 2 3 (Output of the Array should be this).
