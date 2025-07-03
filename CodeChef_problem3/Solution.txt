@@ -1,0 +1,27 @@
+class Solution{
+    static int solve(Node root){
+        Node prevNode=root;
+        Node currNode=root.next;
+        Node nextNode=root.next.next;
+        int count=0;
+        while(nextNode!=null){
+            if(prevNode.val<currNode.val && nextNode.val<currNode.val){
+                count++;
+            }else if(prevNode.val>currNode.val && nextNode.val>currNode.val){
+                count++;
+            }
+            prevNode=currNode;
+            currNode=nextNode;
+            nextNode=currNode.next;
+        }
+        return count;
+    }
+
+    public static void main(String[] args){
+	//If you want you can write your full code 
+    }
+}
+
+
+
+
