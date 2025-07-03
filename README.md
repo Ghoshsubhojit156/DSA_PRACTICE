@@ -1,2 +1,2 @@
 # DSA_PRACTICE
-## Here, I shall upload the full question of the problem and the solution done by me inside VS code taken from different competitive programming platforms like CodeChef, Leetcode and Hackerrank etc. You can practice by looking into the solution and the question, how am I approaching for solving the particular problem. Thank you for showing your Interest.
+## Here, I shall upload the full question of the problem and the solution done by me inside VS code or inside a function provided by certain platforms taken from different competitive programming platforms like CodeChef, Leetcode and Hackerrank etc. You can practice by looking into the solution and the question, how am I approaching for solving the particular problem. Thank you for showing your Interest.
